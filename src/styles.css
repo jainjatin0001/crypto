@@ -1,0 +1,414 @@
+.container {
+  margin: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  height: 100vh;
+  background-color: rgb(236, 220, 245);
+ 
+}
+
+.select{
+  border: 1px solid ;
+  background-color: transparent;
+  width: 150px;
+  height: 30px;
+  border-radius: 10px;
+  margin-top: 20px;
+  text-align: center;
+ 
+}
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.selectcoin{
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-size: 40px;
+  margin-top: 30px;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  /* text-fill-color: transparent; */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 4s linear infinite;
+  
+}
+
+.wtext{
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  /* text-fill-color: transparent; */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 4s linear infinite;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80vh;
+}
+
+.chart-container {
+  width: 90%;
+  height: 100%;
+}
+
+@keyframes mymove{
+  from {left: -400px}
+  to {left: 400px}
+  from {background-color: rgba(206, 185, 224, 0.582);}
+  to {background-color: rgb(255, 255, 255);}
+}
+
+.initial{
+  width: 400px;
+  height: 50px;
+  margin-top: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 10px;
+  font-weight: bold;
+  position: relative;
+  animation: mymove 7s infinite; 
+  animation-timing-function: ease;
+}
+
+.button{
+  width: 150px;
+  height: 40px;
+  margin-top: 30px;
+  margin-left: 50px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 10px;
+  font-weight: bold;
+  border: 1px solid ;
+  background-color: transparent;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+
+@keyframes circle {
+  0% { clip-path: circle(75%); }
+  50% { clip-path: circle(25%); }
+  100% { clip-path: circle(75%); }
+}
+
+.back{
+  background-color: rgb(236, 220, 245);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: circle 5s ;
+  clip-path: circle(75%);
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.real{
+  display: flex;
+  flex-direction: row;
+}
+
+.text{
+  margin-top: 40px;
+  margin-right: 40px;
+  font-size: 20px;
+  animation: 4s anim-popoutin ease infinite;
+}
+@keyframes anim-popoutin {
+  0% {
+    color: rgb(212, 87, 149);
+    transform: scale(0);
+    opacity: 0;
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+  25% {
+    color: rgba(89, 31, 134, 0.708);
+    transform: scale(2);
+    opacity: 1;
+    text-shadow: 3px 10px 5px rgba(0, 0, 0, 0.5);
+  }
+  50% {
+    color: rgb(38, 67, 164);
+    transform: scale(1);
+    opacity: 1;
+    text-shadow: 1px 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    /* animate nothing to add pause at the end of animation */
+    color: rgb(184, 75, 129);
+    transform: scale(1);
+    opacity: 1;
+    text-shadow: 1px 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+
+.image{
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 50px;
+  
+}
+
+.img{
+  width: 150px;
+  height: 140px;
+  border-radius: 50%;
+  margin-left: 20px;
+  margin-right: 40px;
+}
+
+@media only screen and (max-width:768px) {
+  .image{
+    display: flex;
+    flex-direction: column;
+  }
+  .img{
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+
+.roller{
+  height: 4.125rem;
+  line-height: 4rem;
+  position: relative;
+  overflow: hidden; 
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #1D3557;
+}
+
+.roller #rolltext {
+  position: absolute;
+  top: 0;
+  animation: slide 7s infinite;  
+  font-size: 25px;
+}
+
+@keyframes slide {
+  0%{
+    top:0;
+  }
+  25%{
+    top: -4rem;    
+  }
+  50%{
+    top: -8rem;
+  }
+  72.5%{
+    top: -12.25rem;
+  }
+}
+
+.waviy {
+  position: relative;
+  margin-top: 40px;
+  font-size: 40px;
+  margin-left: -50px;
+}
+.waviy span {
+  position: relative;
+  display: inline-block;
+  font-size: 40px;
+  color: black;
+  text-transform: uppercase;
+  animation: flip 3s infinite;
+  animation-delay: calc(.3s * var(--i))
+}
+@keyframes flip {
+  0%,50% {
+    transform: rotateY(360deg) 
+  }
+}
+
+.gallery  {
+  margin-top: 50px;
+  --s: 280px; /* control the size */
+  
+  display: grid;
+  width: var(--s);
+  aspect-ratio: 1;
+  overflow: hidden;
+  padding: calc(var(--s)/20);
+  border-radius: 50%;
+  position: relative;
+  clip-path: circle(49.5%); /* to avoid a few glitch cause by overflow: hidden */
+}
+.gallery::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: inherit;
+  border-radius: inherit;
+  background: repeating-conic-gradient(#789048 0 30deg,#DFBA69 0 60deg);
+  -webkit-mask: 
+     linear-gradient(#fff 0 0) content-box, 
+     linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+}
+.gallery > img {
+  grid-area: 1/1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+  transform-origin: 50% 120.7%;
+}
+.gallery::after,
+.gallery > img {
+  animation: m 8s infinite cubic-bezier(.5,-0.2,.5,1.2);
+}
+.gallery > img:nth-child(2) {animation-delay: -2s}
+.gallery > img:nth-child(3) {animation-delay: -4s}
+.gallery > img:nth-child(4) {animation-delay: -6s}
+
+@keyframes m {
+  0%,3%    {transform: rotate(0)}
+  22%,27%  {transform: rotate(-90deg)}
+  47%,52%  {transform: rotate(-180deg)}
+  72%,77%  {transform: rotate(-270deg)}
+  98%,100% {transform: rotate(-360deg)}
+}
+
+.dash{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  
+}
+
+
+@media screen and (max-width: 600px){
+  h1{
+  text-align:center;
+  text-transform: uppercase;
+  color: #F1FAEE; 
+  font-size: 2.125rem;
+}
+  
+  .roller{
+  height: 2.6rem; 
+  line-height: 2.125rem;  
+  }
+  
+  #spare-time {
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+  }
+  
+  .roller #rolltext {  
+  animation: slide-mob 5s infinite;  
+}
+  
+  @keyframes slide-mob {
+  0%{
+    top:0;
+  }
+  25%{
+    top: -2.125rem;    
+  }
+  50%{
+    top: -4.25rem;
+  }
+  72.5%{
+    top: -6.375rem;
+  }
+}
+
+
+.initial{
+  width: 200px;
+  height: 80px;
+  margin-top: 80px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
+  border-radius: 10px;
+  font-weight: bold;
+  position: relative;
+  animation: mymove 7s infinite; 
+  animation-timing-function: ease;
+}
+@keyframes mymove{
+  from {left: -100px}
+  to {left: 100px}
+  from {background-color: rgba(206, 185, 224, 0.582);}
+  to {background-color: rgb(255, 255, 255);}
+}
+
+.text{
+  margin-top: 40px;
+  margin-right: 30px;
+  margin-left:10px;
+  font-size: 13px;
+  animation: 4s anim-popoutin ease infinite;
+}
+@keyframes anim-popoutin {
+  0% {
+    color: rgb(212, 87, 149);
+    transform: scale(0);
+    opacity: 0;
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+  25% {
+    color: rgba(89, 31, 134, 0.708);
+    transform: scale(2);
+    opacity: 1;
+    text-shadow: 3px 10px 5px rgba(0, 0, 0, 0.5);
+  }
+  50% {
+    color: rgb(38, 67, 164);
+    transform: scale(1);
+    opacity: 1;
+    text-shadow: 1px 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    /* animate nothing to add pause at the end of animation */
+    color: rgb(184, 75, 129);
+    transform: scale(1);
+    opacity: 1;
+    text-shadow: 1px 0 0 rgba(0, 0, 0, 0);
+  }
+}
+.waviy{
+  margin-left: 10px;
+ 
+}
+
+}
